@@ -1,0 +1,32 @@
+version: 2.1
+jobs:
+  run-test:
+    docker:
+      - image: mcr.microsoft.com/playwright:v1.55.0-noble  # latest known Playwright image + newer OS
+
+    steps:
+      - checkout
+
+      - run:
+          name: Check Node.js & npm version
+          command: |
+            node -v
+            npm -v
+
+      - run:
+          name: Download dependencies
+          environment:
+            SECRET_KEY: SECRET_KEY
+          command: npm ci
+
+      - run:
+          name: Run tests
+          command: npm run test
+      - run: 
+      - store_test_results:
+          path: results.xml
+      
+workflows:
+  run-test-workflow:
+    jobs:
+      - run-test

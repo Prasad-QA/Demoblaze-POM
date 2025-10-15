@@ -1,9 +1,26 @@
 {
-  "dependencies": {
-    "playwright": "^1.56.0"
+  "name": " ",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npx playwright install",
+     "test":"npx playwright test",
+      "report": "npx playwright show-report"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prasad-QA/Playwright-Framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prasad-QA/Playwright-Framework/issues"
+  },
+  "homepage": "https://github.com/Prasad-QA/Playwright-Framework#readme",
   "devDependencies": {
-    "@playwright/test": "^1.56.0"
-  },
-  "scripts": {}
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.5.2"
+  }
 }
