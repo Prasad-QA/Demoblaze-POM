@@ -18,6 +18,7 @@ await this.page.getByRole('link', { name: 'Home' }).click();
 
 await this.page.getByRole('link', { name: 'Cart' }).click();
 
+
 }
 
 

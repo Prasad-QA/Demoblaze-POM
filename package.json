@@ -1,12 +1,12 @@
 {
-  "name": "Demoblaze-POM" ,
+  "name": "Blazedemo-POM",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "postinstall": "npx playwright install",
-     "test":"npx playwright test",
-      "report": "npx playwright show-report"
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Prasad-QA/Demoblaze-POM.git#readme",
   "devDependencies": {
-    "@playwright/test": "^1.55.1",
+    "@playwright/test": "^1.56.0",
     "@types/node": "^24.5.2"
   }
 }
