@@ -1,8 +1,9 @@
 
-import {test,expect} from '@playwright/test';
-import { loginpage } from './pages[demoblaze]/loginpage';
-import { Homepage } from './pages[demoblaze]/Homepage';
-import { Cartpage } from './pages[demoblaze]/Cartpage';
+import {test} from "@playwright/test"
+import { loginpage } from './pages/loginpage';
+import { HomePage, Homepage } from './pages/Homepage';
+import { Cartpage } from './pages/Cartpage';
+
 
 test('test',async({page})=>{
 
@@ -11,19 +12,20 @@ test('test',async({page})=>{
 
 const login = new loginpage(page);
 await login.gotoLogInpage();
-await login.login('pavanol','test@123')
+await login.login();
 
 
     //homepage\
 
-const home = new Homepage(page);
-await home.homepage();
+const home = new HomePage(page);
+await home.openProduct();
 
     //cart
 
 const cart = new Cartpage(page)
 
 await cart.addcart();
+
 
 
 });

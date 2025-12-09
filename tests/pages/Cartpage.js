@@ -1,10 +1,9 @@
+const { BasePage } = require("./BasePage");
 
-exports.Cartpage =
-class Cartpage {
+exports.Cartpage = class Cartpage extends BasePage {
 
 constructor(page){
-this.page=page;
-
+super(page);
     
 }
 
@@ -18,6 +17,7 @@ await this.page.getByRole('link', { name: 'Home' }).click();
 
 await this.page.getByRole('link', { name: 'Cart' }).click();
 
+await this.screenshot('items')
 
 }
 
