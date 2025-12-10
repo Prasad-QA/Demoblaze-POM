@@ -1,16 +1,17 @@
 
-import {test} from "@playwright/test"
+//import {test} from "@playwright/test"
 import { loginpage } from './pages/loginpage';
 import { HomePage, Homepage } from './pages/Homepage';
 import { Cartpage } from './pages/Cartpage';
+const { test, expect } = require("./fixtures/envFixture");
 
 
-test('test',async({page})=>{
+test('test',async({page,envData})=>{
 
 
     //login
 
-const login = new loginpage(page);
+const login = new loginpage(page ,envData);
 await login.gotoLogInpage();
 await login.login();
 
